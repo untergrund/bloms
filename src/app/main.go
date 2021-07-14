@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"time"
+    "os"
 )
 
 type response struct {
@@ -19,7 +20,7 @@ func main() {
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(respJSON)
 	})
-	port := ":8080"
+	port := os.Getenv("PORT")
 	server := &http.Server{
 		Addr:           port,
 		ReadTimeout:    10 * time.Second,
