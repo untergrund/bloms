@@ -1,1 +1,1 @@
-web: bon/bloms
+web: bin/bloms
