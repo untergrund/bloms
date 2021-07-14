@@ -20,7 +20,7 @@ func main() {
 		w.Header().Set("Content-Type", "application/json")
 		w.Write(respJSON)
 	})
-	port := os.Getenv("PORT")
+	port := ":" + os.Getenv("PORT")
 	server := &http.Server{
 		Addr:           port,
 		ReadTimeout:    10 * time.Second,
